@@ -1,0 +1,28 @@
+#poster {    
+    text-align: center;
+    align-items: center;
+    min-width: 300px;
+    max-width: 800px;
+    width: 80%;
+    margin: auto;
+    border: 2px solid black;
+    justify-content: space-between;
+}
+.table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+.freelancer {
+    display: flex;
+    /* border-bottom: 1px solid black; */
+}
+#header {
+    font-weight: bold;
+}
+#stat {
+    flex: 1;
+    padding: 3px;
+    /* border: 1px solid black; */
+}
