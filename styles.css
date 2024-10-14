@@ -1,4 +1,8 @@
+body{
+    background-color: black;
+}
 #poster {    
+    background-color: aliceblue;
     text-align: center;
     align-items: center;
     min-width: 300px;
