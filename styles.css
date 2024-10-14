@@ -12,17 +12,11 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* border: 1px solid black; */
 }
 .freelancer {
     display: flex;
-    /* border-bottom: 1px solid black; */
 }
-#header {
-    font-weight: bold;
-}
-#stat {
+span {
     flex: 1;
     padding: 3px;
-    /* border: 1px solid black; */
 }

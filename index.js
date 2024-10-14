@@ -27,8 +27,11 @@ freelancerPool.push(new Freelancer(`Aerith`, `Flower Girl`, 777));
 freelancerPool.push(new Freelancer(`Mario`, `Plumber`, 120));
 freelancerPool.push(new Freelancer(`Zero`, `Maverick hunter`, 300));
 freelancerPool.push(new Freelancer(`James`, `Amatuer Investigator`, 20));
+freelancerPool.push(new Freelancer(`Nanaki`, `Good boy`, 0));
+freelancerPool.push(new Freelancer(`Ned`, `Headless Winter Enthusiast`, 80));
 
 
+console.log(freelancerPool);
 
 let i = 0;
 
@@ -49,17 +52,15 @@ function render() {
     freelancerDiv.classList.add("freelancer");
     table.appendChild(freelancerDiv);
     const nameSpan = document.createElement("span");
-    nameSpan.id = "stat";
     nameSpan.textContent = `${freelancerPool[i].name}`;
     const occupationSpan = document.createElement("span")
-    occupationSpan.id = "stat";
     occupationSpan.textContent = `${freelancerPool[i].occupation}`;
     const priceSpan = document.createElement("span");
-    priceSpan.id = "stat";
     priceSpan.textContent = `$${freelancerPool[i].startingPrice}`;
     freelancerDiv.appendChild(nameSpan);
     freelancerDiv.appendChild(occupationSpan);
     freelancerDiv.appendChild(priceSpan);
+    
     freelancers.push(freelancerPool[i]);
     updateAverage();
 }
