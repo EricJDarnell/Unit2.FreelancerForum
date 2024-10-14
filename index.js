@@ -43,23 +43,23 @@ function updateAverage() {
 }
 
 function render() {
-  if (i == freelancerPool.length) {
-    clearInterval(addFreelancerIntervalId);
-  }
-  const table = document.querySelector(".table");
-  const freelancerDiv = document.createElement("div");
-  freelancerDiv.classList.add("freelancer");
-  table.appendChild(freelancerDiv);
-  freelancerDiv.innerHTML = `
-      <span>${freelancerPool[i].name}</span>
-      <span>${freelancerPool[i].occupation}</span>
-      <span>$${freelancerPool[i].startingPrice}</span>
+    if (i == freelancerPool.length - 1) {
+      clearInterval(addFreelancerIntervalId);
+    }
+    const table = document.querySelector(".table");
+    const freelancerDiv = document.createElement("div");
+    freelancerDiv.classList.add("freelancer");
+    table.appendChild(freelancerDiv);
+    freelancerDiv.innerHTML = `
+    <span>${freelancerPool[i]?.name}</span>
+    <span>${freelancerPool[i]?.occupation}</span>
+    <span>$${freelancerPool[i]?.startingPrice}</span>
     `;
-
-  freelancers.push(freelancerPool[i]);
-  updateAverage();
+    
+    freelancers.push(freelancerPool[i]);
+    updateAverage();
 }
 const addFreelancerIntervalId = setInterval(() => {
   render();
-  i++;
+  i++
 }, 3000);
